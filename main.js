@@ -27,6 +27,16 @@ camera.layers.enable(1)
 controls.target.set(-1, 2, 0)
 controls.update()
 
+// Handle window resize
+window.addEventListener('resize', () => {
+    // Update renderer size
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    
+    // Update camera aspect ratio and projection matrix
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+});
+
 //Render loop
 function animate() {
     requestAnimationFrame(animate)
