@@ -6,7 +6,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.154.0/exampl
 //Setup the renderer
 const renderer = new THREE.WebGLRenderer()
 renderer.setClearColor(0x222230)
-renderer.setSize(window.innerWidth, innerHeight)
+renderer.setSize(window.innerWidth, window.innerHeight)
 renderer.shadowMap.enabled = true
 document.body.appendChild(renderer.domElement)
 
